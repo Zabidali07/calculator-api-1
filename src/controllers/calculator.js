@@ -1,7 +1,7 @@
 exports.addNumbers = (req, res) => {
   const { num1, num2 } = req.body;
 
-  if (Number.isInteger(num1) && Number.isInteger(num2)) {
+  if (typeof num1 !== "string" && typeof num2 !== "string") {
     let sum = num1 + num2;
     if (sum >= 1000000) {
       return res.status(200).json({
@@ -26,8 +26,8 @@ exports.addNumbers = (req, res) => {
 exports.subNumbers = (req, res) => {
   const { num1, num2 } = req.body;
 
-  if (Number.isInteger(num1) && Number.isInteger(num2)) {
-    if (num1 >= 1000000 || num2 >= 1000000) {
+  if (typeof num1 !== "string" && typeof num2 !== "string") {
+    if (num1 < 1000000 || num2 < 1000000) {
       return res.status(200).json({
         status: "failure",
         message: "Underflow",
@@ -50,8 +50,7 @@ exports.subNumbers = (req, res) => {
 
 exports.mulNumbers = (req, res) => {
   const { num1, num2 } = req.body;
-
-  if (Number.isInteger(num1) && Number.isInteger(num2)) {
+  if (typeof num1 !== "string" && typeof num2 !== "string") {
     let result = num1 * num2;
 
     if (result >= 1000000) {
@@ -77,7 +76,7 @@ exports.mulNumbers = (req, res) => {
 exports.divNumbers = (req, res) => {
   const { num1, num2 } = req.body;
 
-  if (Number.isInteger(num1) && Number.isInteger(num2)) {
+  if (typeof num1 !== "string" && typeof num2 !== "string") {
     if (num2 == 0) {
       return res.status(200).json({
         status: "failure",
