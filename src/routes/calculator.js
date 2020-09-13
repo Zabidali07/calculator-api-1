@@ -9,11 +9,6 @@ const {
 
 const router = express.Router();
 
-router.get("/", () => {});
-router.get("/", (req, res) => {
-  res.send("Hello World!");
-});
-
 router.post("/add", addNumbers);
 
 router.post("/sub", subNumbers);
