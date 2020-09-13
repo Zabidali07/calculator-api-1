@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 // your code goes here
 app.use("/", calc);
 app.use("/", (req, res) => {
-  res.send("Hello World");
+  res.send("Hello world!");
 });
 // here
 
