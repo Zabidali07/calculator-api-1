@@ -4,7 +4,7 @@ exports.addNumbers = (req, res) => {
 
   return res.status(200).json({
     status: "success",
-    message: "The sum of given two numbers",
+    message: "the sum of given two numbers",
     sum: sum,
   });
 };
