@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 // your code goes here
 app.use("/", calc);
-app.use("/", (req, res) => {
+app.get("/", (req, res) => {
   res.send("Hello world!");
 });
 // here
