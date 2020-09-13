@@ -43,6 +43,7 @@ exports.divNumbers = (req, res) => {
   let div = num1 / num2;
 
   return res.status(200).json({
+    status: "success",
     message: "The division of given two number",
     result: div,
   });
