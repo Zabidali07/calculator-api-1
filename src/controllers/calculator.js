@@ -3,7 +3,8 @@ exports.addNumbers = (req, res) => {
   let sum = num1 + num2;
 
   return res.status(200).json({
-    message: "The sum of given two number",
+    status: "success",
+    message: "The sum of given two numbers",
     sum: sum,
   });
 };
@@ -13,7 +14,8 @@ exports.subNumbers = (req, res) => {
   let difference = num1 - num2;
 
   return res.status(200).json({
-    message: "The difference of given two number",
+    status: "success",
+    message: "the difference of given two number",
     difference: difference,
   });
 };
@@ -23,7 +25,8 @@ exports.mulNumbers = (req, res) => {
   let result = num1 * num2;
 
   return res.status(200).json({
-    message: "The product of given two number",
+    status: "success",
+    message: "The product of given numbers",
     result: result,
   });
 };
@@ -33,7 +36,8 @@ exports.divNumbers = (req, res) => {
 
   if (num2 == 0) {
     return res.status(400).json({
-      message: "The divisor cannot be zero",
+      status: "failure",
+      message: "Cannot divide by zero",
     });
   }
   let div = num1 / num2;

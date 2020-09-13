@@ -9,6 +9,7 @@ const {
 
 const router = express.Router();
 
+router.get("/", () => {});
 router.get("/", (req, res) => {
   res.send("Hello World!");
 });
@@ -19,6 +20,6 @@ router.post("/sub", subNumbers);
 
 router.post("/multiply", mulNumbers);
 
-router.post("/division", divNumbers);
+router.post("/divide", divNumbers);
 
 module.exports = router;

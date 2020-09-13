@@ -12,7 +12,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(bodyParser.json());
 // your code goes here
-app.use("/api", calc);
+app.use("/", calc);
+app.use("/", (req, res) => {
+  res.send("Hello World");
+});
 // here
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
