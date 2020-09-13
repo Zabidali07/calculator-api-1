@@ -10,21 +10,21 @@ exports.addNumbers = (req, res) => {
 
 exports.subNumbers = (req, res) => {
   const { num1, num2 } = req.body;
-  let sub = num1 - num2;
+  let difference = num1 - num2;
 
   return res.status(200).json({
     message: "The difference of given two number",
-    result: sub,
+    difference: difference,
   });
 };
 
 exports.mulNumbers = (req, res) => {
   const { num1, num2 } = req.body;
-  let prod = num1 * num2;
+  let result = num1 * num2;
 
   return res.status(200).json({
     message: "The product of given two number",
-    result: prod,
+    result: result,
   });
 };
 
