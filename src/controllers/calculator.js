@@ -27,13 +27,13 @@ exports.subNumbers = (req, res) => {
   const { num1, num2 } = req.body;
 
   if (typeof num1 !== "string" && typeof num2 !== "string") {
-    if (num1 < 1000000 || num2 < 1000000) {
+    let difference = num1 - num2;
+    if (Math.abs(difference) > 1000000) {
       return res.status(200).json({
         status: "failure",
         message: "Underflow",
       });
     }
-    let difference = num1 - num2;
 
     return res.status(200).json({
       status: "success",
